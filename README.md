@@ -34,17 +34,18 @@ ln -s ~/somewhere/md-snapshot ~/.claude/skills/md-snapshot
 `~/.config/md-snapshot/env`（不進版控，只在你機器上）：
 
 ```bash
-SNAPSHOT_DIR="~/CLAUDE-snapshots"
+SNAPSHOT_DIR="~/Documents/全md紀錄"
 NAME_PREFIX="CLAUDE"
 ```
 
-沒有這個檔案時用上面的通用預設值。
+第一次使用時（還沒有這個檔），Claude 會先問你要存哪、檔名前綴叫什麼，並以上面為預設值；確認後寫進這個檔，之後不再問。
 
 ## 安全鐵則
 
 - 一定用 `cp`（複製），絕不用 `mv`（搬移）——正本必須留在原位，否則 Claude Code 讀不到全域設定。
 - 快照資料夾不放進 `~/.claude/` 裡面，備份跟正本分開放。
-- 同一天已有快照時，先問要覆寫還是加流水號，不直接覆寫。
+- 同一天已有快照時，直接加流水號（`_YYYYMMDD-2.md`、`-3`…），一律不覆寫。
+- 內容跟最新一份快照完全相同（sha1 比對）就不存，直接告訴你「已跳過」。
 
 ## License
 
