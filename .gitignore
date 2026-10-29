@@ -1,0 +1,7 @@
+# macOS Finder 自動產生的隱藏檔，與 skill 內容無關
+.DS_Store
+
+# bak 指令產生的本機備份，不進版控（同層 backups/）
+backups/
+# 維護筆記，只給本機的 Claude 讀（cd 進來自動載入）。含真實路徑，永不進版控。
+/CLAUDE.md
