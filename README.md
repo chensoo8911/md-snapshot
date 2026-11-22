@@ -4,7 +4,7 @@
 
 ## 這是什麼
 
-- **輸入**：你說「快照全md」。
+- **輸入**：你打 `/md-snapshot`。
 - **動作**：用 `cp`（絕不用 `mv`）把 `~/.claude/CLAUDE.md` 複製一份到快照資料夾，檔名帶當天日期。
 - **首次使用**會問你要存去哪個資料夾、檔名前綴叫什麼，之後記住（寫進 `~/.config/md-snapshot/env`），不用每次再問。
 
@@ -23,11 +23,11 @@ git clone <REPO_URL> ~/somewhere/md-snapshot
 ln -s ~/somewhere/md-snapshot ~/.claude/skills/md-snapshot
 ```
 
-裝好後重開 Claude Code session，說「快照全md」就會觸發。
+裝好後重開 Claude Code session，打 `/md-snapshot` 就會執行。
 
 ## 觸發詞
 
-「快照全md」
+`/md-snapshot`（沒有口語觸發詞）
 
 ## 個人設定
 
